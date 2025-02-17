@@ -1,0 +1,70 @@
+/* Reset default margin, padding, and ensure box-sizing includes padding/borders */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* Ensure the entire page takes up full height and width */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Main container styling */
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem; /* Adds spacing around the main container */
+  display: flex; /* Uses flexbox for side-by-side layout */
+  gap: 1rem; /* Adds space between left and right sections */
+}
+
+/* Both left and right sections take up equal space */
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%; /* Each takes 50% of available width */
+  border-radius: 0.7rem; /* Adds rounded corners */
+}
+
+/* Left section styling (Code Editor) */
+main .left {
+  background-color: #000000; /* Black background */
+  position: relative; /* Allows absolute positioning of child elements */
+}
+
+/* Code editor styling */
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c; /* Darker background for the editor */
+}
+
+/* Review button inside the left section */
+main .left .review {
+  position: absolute; /* Positions it at the bottom-right */
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255); /* Light blue background */
+  color: #000000; /* Black text */
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer; /* Makes it clickable */
+  user-select: none; /* Prevents text selection */
+  border-radius: 0.7rem; /* Rounded corners */
+}
+
+/* Right section styling (AI Review Output) */
+main .right {
+  background-color: #343434; /* Dark gray background */
+  padding: 1rem 2rem;
+  font-size: 1.5rem; /* Slightly larger font for better readability */
+  overflow: auto; /* Enables scrolling if content overflows */
+}
