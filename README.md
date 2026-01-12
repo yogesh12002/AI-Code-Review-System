@@ -5,7 +5,8 @@ An **AI-powered Code Review Application** that analyzes developer code, detects 
 This project includes:
 - ⚙️ **Backend:** Node.js + Express + Google Generative AI SDK  
 - 💻 **Frontend:** React (Vite) + Tailwind CSS  
-- 🔐 **Environment Configuration:** `.env` for API key management  
+- 🔐 **Environment Configuration:** `.env` for API key management
+  
 
 ---
 
